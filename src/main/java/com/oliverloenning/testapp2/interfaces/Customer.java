@@ -1,5 +1,6 @@
 package com.oliverloenning.testapp2.interfaces;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

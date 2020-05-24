@@ -3,7 +3,9 @@ package com.oliverloenning.testapp2.rest;
 import com.oliverloenning.testapp2.enums.Actions;
 import com.oliverloenning.testapp2.enums.Status;
 import com.oliverloenning.testapp2.interfaces.*;
+import com.oliverloenning.testapp2.models.AccountDummy;
 import com.oliverloenning.testapp2.models.BankDummy;
+import com.oliverloenning.testapp2.models.CustomerDummy;
 import com.oliverloenning.testapp2.models.MovementDTO;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +36,7 @@ public class Contract implements RestCalls {
 
     @PostMapping("/account")
     @Override
-    public Status createAccount(@RequestBody Account account) {
+    public Status createAccount(@RequestBody AccountDummy account) {
         if (account == null) {
             return Status.FAILED;
         }
@@ -47,7 +49,7 @@ public class Contract implements RestCalls {
 
     @PostMapping("/customer")
     @Override
-    public Status createCustomer(@RequestBody Customer customer) {
+    public Status createCustomer(@RequestBody CustomerDummy customer) {
         if (customer == null) {
             return Status.FAILED;
         }
